@@ -1,0 +1,455 @@
+@import "../css/bootstrap/scss/bootstrap";
+@import "../css/bootstrap/scss/variables";
+@import "../css/bootstrap/scss/mixins";
+
+$primColor: rgb(192, 155, 77);
+$secondColor: rgb(104, 107, 66);
+$thirdColor: #7e858c;
+$cardcolr: #fff;
+$highlight: rgb(24, 24, 24);
+$white: #fff;
+$black: #000;
+$africawidth: 100%;
+$africaheight: 100%;
+$font-primary: "rubik", Arial, sans-serif;
+$zindex: 9999999;
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-Bold.woff2") format("woff2"), url("../fonts/rubik/Rubik-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-Black.woff2") format("woff2"), url("../fonts/rubik/Rubik-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-BlackItalic.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-BlackItalic.woff") format("woff");
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-LightItalic.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-LightItalic.woff") format("woff");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-Italic.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-Italic.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-Light.woff2") format("woff2"), url("../fonts/rubik/Rubik-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-ExtraBold.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-ExtraBold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-Medium.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-ExtraBoldItalic.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-ExtraBoldItalic.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-MediumItalic.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-MediumItalic.woff") format("woff");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-BoldItalic.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-BoldItalic.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-SemiBoldItalic.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-SemiBoldItalic.woff") format("woff");
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-Regular.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/rubik/Rubik-SemiBold.woff2") format("woff2"),
+		url("../fonts/rubik/Rubik-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	position: relative;
+	overflow-x: hidden;
+	font-family: $font-primary !important;
+	font-size: 14px;
+	line-height: 1.8;
+	font-weight: normal;
+}
+
+.custcard {
+	position: relative;
+	background: white;
+	min-width: 90%;
+	max-width: 250px;
+	height: 230px;
+	border-radius: 5px;
+	.imgwrp {
+		height: 120px;
+		position: relative;
+		background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+	}
+	.car-price {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 36px;
+		letter-spacing: -0.015em;
+		color: #0987eb;
+	}
+	.car-name {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 36px;
+		letter-spacing: -0.015em;
+	}
+	.car-info {
+		font-size: 12px;
+	}
+}
+.custcardSmall {
+	position: relative;
+	background: white;
+	min-width: 90%;
+	max-width: 250px;
+	min-height: 120px;
+	border-radius: 5px;
+	.imgwrp {
+		height: 130px;
+		position: relative;
+		background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+	}
+	.car-name {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 36px;
+		letter-spacing: -0.015em;
+	}
+
+}
+
+.custcard, .custcardSmall{
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+}
+.desccard {
+	height: 430px;
+	overflow-y: auto;
+	padding: 30px 20px;
+	text-align: justify;
+}
+a {
+	transition: 0.3s all ease;
+	color: inherit;
+	text-decoration: none !important;
+	&:hover,
+	&:focus {
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+button {
+	transition: 0.3s all ease;
+	min-width: 80px!important;
+	height: 45px;
+	border-radius: 0px!important;
+	&:hover,
+	&:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: $font-primary;
+	color: $black;
+}
+.btn-pri {
+	background-color: $primColor !important;
+}
+.sidelink {
+	position: relative;
+	transition: all 1s ease;
+	&.active {
+		height: 10%;
+		font-weight: bold;
+		color: $secondColor !important;
+	}
+	&:hover {
+		a {
+			font-weight: bold;
+			text-decoration: none;
+			color: $secondColor;
+		}
+	}
+}
+.h1 {
+	color: $primColor;
+}
+.htitle {
+	color: $primColor;
+	font-weight: bold;
+}
+.jumbosection.bcg-parallax {
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	.bcg {
+		height: 100%;
+		overflow: hidden;
+		background-color: lightgray;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		img {
+			width: 150%;
+		}
+	}
+	.hero-content,
+	.content-wrapper {
+		position: relative;
+		z-index: 999;
+		color: $secondColor;
+		h1 {
+			color: $primColor;
+			text-shadow: 0px 0px 6px black;
+		}
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba($primColor, 0.3);
+	}
+}
+.banner_wrapper {
+	position: absolute;
+	background: lighten($color: $primColor, $amount: 0.5);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	img {
+		width: 100%;
+	}
+}
+#wpadminbar {
+	bottom: 0 !important;
+	position: absolute;
+	top: auto;
+	display: block;
+}
+
+#navbar {
+	margin-bottom: 100px;
+	transition: all 0.4s ease;
+	.navbar-brand {
+		width: 120px;
+		img {
+			width: 120px;
+			margin-left: 20px;
+		}
+	}
+	.nav-item {
+		&.active {
+			background-color: lighten($color: $primColor, $amount: 0.5);
+		}
+	}
+}
+
+.actvnavbar {
+	background: #fff !important;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.19);
+	color: rgb(23, 46, 85) !important;
+	z-index: 9999999999999999;
+}
+
+#specificationwrapper{
+	min-height: 250px;
+}
+#nav-tab{
+	.nav-link{
+		&.active{
+			background-color: rgba($black, 0.05);
+		}
+
+	}
+
+}
+#nav-tabContent{
+	.tab-pane{
+		min-height: 250px;
+	}
+}
+#lastestwrapper{
+	min-height: 300px;
+	background-color: rgba($black, 0.05);
+	padding: 40px 0px;
+
+}
+
+#contForm{
+	.ch1{
+		background-color: $primColor;
+		color: white;
+		padding: 10px 0px;
+	}
+	.btn{
+		background-color: $secondColor;
+		color: white;
+	}
+}
+.form-control{
+	border-radius: 0px;
+}
+
+#headercara {
+	height: 95vh;
+	display: block!important;
+	.owl-stage-outer {
+		height: 100%;
+		background-color: gray;
+
+		.owl-stage {
+			height: 100%;
+
+			.owl-item {
+				height: 100%;
+				overflow: hidden;
+
+				.item {
+					height: 100%;
+
+					.black-overlay {
+						height: 100%;
+						width: 100%;
+						background-color: rgba(0, 0, 0, 0.5);
+						position: absolute;
+					}
+					.hero-content {
+						width: 100%;
+						z-index: 9999999;
+						.col-md-12 {
+							.middleTxt,
+							.btmTxt {
+								color: #fff;
+								text-align: left;
+								font-size: 1.5rem;
+							}
+							.topTxt {
+								color: $primColor;
+								font-weight: bold;
+								font-size: 3rem;
+								text-align: left;
+							}
+						}
+					}
+
+					.lpic {
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+					}
+				}
+			}
+		}
+	}
+}

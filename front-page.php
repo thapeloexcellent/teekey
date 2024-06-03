@@ -13,18 +13,43 @@ if (have_posts()) {
 ?>
 
 <section>
-    <div class="container py-5 bg-primary">
+    <div class="banner bg-success" style="height: 600px;"></div>
+</section>
+
+<section>
+    <div class="container py-5">
         <div class="row">
             <div class="col-6">picture</div>
             <div class="col-6">
-                <h1>about us</h1>
-                <p>Teekey Investments, registered as Wheels of Teekey Investments (Pty) Ltd, is a proudly South African private company, 100% black-owned and dedicated to driving economic growth and empowerment. Established with a vision to revolutionize the fuel and infrastructure sectors in Southern Africa, we have quickly grown to become a key player in the industry.</p>
+                <h1>Investment<br>
+                    Opportunities</h1>
+                <div class="bg-secondary mb-3" style="height: 15px;"></div>
+                <p>Available investment instruments include Ordinary Shares and
+                    Preference Shares, all denominated preferably in Rands and
+                    redeemable in the same currency. Investors may also participate
+                    in debentures or notes with maturity intervals of up to one year</p>
             </div>
         </div>
     </div>
 </section>
 
-<section>
+<section class="bg-secondary">
+    <div class="container py-5 bg-secondary">
+        <div class="row">
+            <div class="col-5">picture</div>
+            <div class="col-5">
+                <div class="text-center">
+                    <h1>Explore Investment<br>
+                        Opportunities</h1>
+                    <p>Our experts are ready to answer your questions</p>
+                    <button class="btn btn-success">Book Consultant</button>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+</section>
+
+<!-- <section>
     <div class="container py-5 bg-secondary">
         <div class="row">
             <h1 class="text-center mb-3">Services</h1>
@@ -134,7 +159,7 @@ if (have_posts()) {
             <div>
             </div>
         </div>
-</section>
+</section> -->
 
 
 <?php
